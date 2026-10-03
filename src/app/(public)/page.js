@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default async function Home() {
   const recipesData = await getRecipes();
-  const recipes = recipesData?.recipes || []
-  console.log(recipes)
+  const recipesArray = recipesData?.recipes || []
+  const recipes = recipesArray.slice(0, 8);
   return (
    <div >
     <Hero></Hero>
