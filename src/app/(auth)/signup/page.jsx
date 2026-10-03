@@ -1,9 +1,128 @@
 import React from "react";
 
-export default function SignUpPage() {
+const SignUp = () => {
   return (
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-semibold">This is sign up page</h2>
+    // Main Container with Background Image
+    <div className=" w-full flex items-center justify-center py-20 px-5 relative">
+      {/* Centered Registration Card */}
+      <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl z-10 p-6 sm:p-8 border-t-4 border-orange-500">
+        {/* Header / Logo */}
+        <div className="text-center mb-6">
+          <a
+            href="#"
+            className="text-2xl font-extrabold text-gray-900 tracking-tight inline-block mb-2"
+          >
+            Recipe<span className="text-orange-500">Hub</span>
+          </a>
+          <h1 className="text-xl font-bold text-gray-800">Create an Account</h1>
+          <p className="text-sm text-gray-500 mt-1">
+            Join the community of food lovers.
+          </p>
+        </div>
+
+        {/* Form Fields */}
+        <form className="space-y-4">
+          {/* Name Field */}
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide"
+            >
+              Full Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="John Doe"
+              className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-sm"
+            />
+          </div>
+
+          {/* Email Field */}
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide"
+            >
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="hello@example.com"
+              className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-sm"
+            />
+          </div>
+
+          {/* Password Fields (Side by Side for saving height) */}
+
+          <div>
+            <label
+              htmlFor="password"
+              className="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all text-sm"
+            />
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="button"
+            className="w-full py-3 mt-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors duration-300 shadow-md hover:shadow-orange-500/30 text-sm"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        {/* Divider */}
+        <div className="flex items-center my-5">
+          <div className="flex-grow border-t border-gray-200"></div>
+          <span className="px-3 text-xs text-gray-400 font-medium">OR</span>
+          <div className="flex-grow border-t border-gray-200"></div>
+        </div>
+
+        {/* Social Auth Button */}
+        <button
+          type="button"
+          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-300 shadow-sm font-semibold text-gray-700 text-sm"
+        >
+          <svg className="w-4 h-4" viewBox="0 0 24 24">
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              fill="#4285F4"
+            />
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"
+            />
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"
+            />
+          </svg>
+          Continue with Google
+        </button>
+
+        {/* Login Link */}
+        <p className="text-center text-sm text-gray-600 mt-5">
+          Already have an account?{" "}
+          <a href="#" className="text-orange-500 font-bold hover:underline">
+            Sign In
+          </a>
+        </p>
+      </div>
     </div>
   );
-}
+};
+
+export default SignUp;

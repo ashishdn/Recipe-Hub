@@ -10,3 +10,9 @@ export async function getRecipeById(id){
     return data;
 }
     
+export  async function RecipePage() {
+  const recipesData = await getRecipes();
+  const recipes = recipesData?.recipes || [];
+
+  return <RecipePage recipes={recipes} />;
+}
